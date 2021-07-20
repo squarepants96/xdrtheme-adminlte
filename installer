@@ -26,3 +26,4 @@ wget -O /www/xderm/menu-admin.php $url/menu-admin.php -q
 wget -O /www/xderm/theme.php $url/theme.php -q
 wget -O /www/xderm/xderm-up.php $url/xderm-up.php -q
 echo Start > /www/xderm/log/st
+echo "Terima kasih -salam Ardi Setiawan"
