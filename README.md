@@ -22,7 +22,7 @@ AdminLTE Theme is most beautiful theme based on flat style with colorful user in
 
 Copy scripts below and run it via **```terminal```**
 ```
-wget -O installer-adminlte https://raw.githubusercontent.com/helmiau/xdrtheme-adminlte/blob/main/installer-adminlte && chmod +x installer-adminlte && ./installer-adminlte
+wget -O installer-adminlte https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/installer-adminlte && chmod +x installer-adminlte && ./installer-adminlte
 ```
 
 Run command **```./installer-adminlte```** Then follow instruction below
