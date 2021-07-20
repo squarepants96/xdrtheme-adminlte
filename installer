@@ -1,0 +1,28 @@
+#!/bin/bash
+clear;
+echo -e "######################################"
+echo -e "#                                    #"
+echo -e "#     Xderm Mini Theme Installer     #"
+echo -e "#                                    #"
+echo -e "######################################"
+echo -e "#                                    #"
+echo -e "#     Theme Name	: AdminLTE	      #"
+echo -e "#     Creator		: Ardi Setiawan	  #"
+echo -e "#                                    #"
+echo -e "######################################"
+echo -e "#"
+echo "Installing, Tunggu....."
+mkdir -p /www/xderm /www/xderm/js /www/xderm/bootstrap /www/xderm/build /www/xderm/dist /www/xderm/font-awesome /www/xderm/Ionicons /www/xderm/lib /www/xderm/plugins /www/xderm/img /www/xderm/log
+url="https://github.com/squarepants96/xderm-mini-theme/main"
+wget -O /www/xderm/index.php $url/index.php -q
+wget -O /www/xderm/index.html $url/index.html -q
+wget -O /www/xderm/login.php $url/login.php -q
+wget -O /www/xderm/header.php $url/header.php -q
+wget -O /www/xderm/about.php $url/about.php -q
+wget -O /www/xderm/footer.php $url/footer.php -q
+wget -O /www/xderm/limitation.php $url/limitation.php -q
+wget -O /www/xderm/main-header.php $url/main-header.php -q
+wget -O /www/xderm/menu-admin.php $url/menu-admin.php -q
+wget -O /www/xderm/theme.php $url/theme.php -q
+wget -O /www/xderm/xderm-up.php $url/xderm-up.php -q
+echo Start > /www/xderm/log/st
