@@ -1,0 +1,20 @@
+
+{40:22} v.binari saat ini 3.0
+{40:22} Membersihkan sisa sisa, Tunggu....
+{40:22} Mode yang dipilih: SSH [ssh]
+{40:22} Menguji bug SNI (openssl).. OK
+{40:23} Menjalankan Inject [python]
+##############################################
+  Host: 13.212.177.12
+  Port: 990
+  User: ardi-vip
+  Pass: ********
+  Port UDPgw: 7600
+##############################################
+{40:36} Menjalankan SSH (latarbelakang)....
+{40:38} Menguji Koneksi... <pre><h2 style="color:#006400" "text-overflow:ellipsis">HTTP/1.1 200 OK</h2></pre>
+{40:40} Memuat ulang Firewall....
+{41:06} Menjalankan go-tun2socks....
+{41:08} Routing Host, IP Gateway dan dns..
+{41:08} Menjalankan rekonek otomatis...
+{41:09} Selesai.
