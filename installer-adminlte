@@ -63,6 +63,7 @@ echo "==========================================="
 echo -e "  ${GRE}Theme Name     : $THEMENAME"
 echo -e "  ${GRE}Theme Creator  : $CREATOR"
 echo -e "  ${GRE}Theme Link     : github.com/$GITUSER/$GITREPO${NOR}"
+echo -e "  ${GRE}Installer Name : $INSTALLERNAME${NOR}"
 echo "==========================================="
 echo -e "  ${GRE}Install Status : $INSTALLSTAT"
 echo -e "  ${GRE}Xderm Path     : $XDERMPATHINFO"
@@ -110,7 +111,7 @@ if [[ $jawab == "g" || $jawab == "G"  || $jawab == "1" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
+	./$INSTALLERNAME
 elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 	clear
 	echo "  Checking connections..."
@@ -163,7 +164,7 @@ elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
+	./$INSTALLERNAME
 elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 	clear
 	echo "  Checking connections..."
@@ -232,8 +233,8 @@ elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "3" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "4" ]]; then
 	clear
 	echo "  Uninstalling $THEMENAME..."
 	echo "  Checking paths..."
@@ -260,8 +261,8 @@ elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "3" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "a" || $jawab == "A"  || $jawab == "3" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "a" || $jawab == "A"  || $jawab == "5" ]]; then
 	echo -n "  Enter New Username : " 
 	read -r USERNEW
 	echo "==========================================="
@@ -270,22 +271,22 @@ elif [[ $jawab == "a" || $jawab == "A"  || $jawab == "3" ]]; then
 	echo -e "user=$USERNEW\npasswd=$PASSNEW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "u" || $jawab == "U"  || $jawab == "4" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "u" || $jawab == "U"  || $jawab == "6" ]]; then
 	echo -n "  Enter New Username : " 
 	read -r USERNEW
 	echo -e "user=$USERNEW\npasswd=$PASSNOW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "p" || $jawab == "P"  || $jawab == "5" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "p" || $jawab == "P"  || $jawab == "7" ]]; then
 	echo -n "  Enter New Password : "
 	read -r PASSNEW
 	echo -e "user=$USERNOW\npasswd=$PASSNEW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "lp" || $jawab == "LP"  || $jawab == "6" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "lp" || $jawab == "LP"  || $jawab == "8" ]]; then
 	clear
 	echo "==========================================="
 	echo -e "     Xderm Mini Login Page Installer by helmiau "
@@ -333,8 +334,8 @@ elif [[ $jawab == "lp" || $jawab == "LP"  || $jawab == "6" ]]; then
 	echo -e " Install login page process finished..."
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
-elif [[ $jawab == "rlp" || $jawab == "RLP"  || $jawab == "7" ]]; then
+	./$INSTALLERNAME
+elif [[ $jawab == "rlp" || $jawab == "RLP"  || $jawab == "9" ]]; then
 	clear
 	clear
 	echo "==========================================="
@@ -379,7 +380,7 @@ elif [[ $jawab == "rlp" || $jawab == "RLP"  || $jawab == "7" ]]; then
 	echo -e " Removal login page process finished..."
 	echo "==========================================="
 	clear
-	./"$INSTALLERNAME"
+	./$INSTALLERNAME
 else
 	echo "    Exiting program !"
 	echo "==========================================="
