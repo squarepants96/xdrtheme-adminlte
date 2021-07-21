@@ -93,9 +93,10 @@ ceklogin();
                         <div>
                             <span>Special Thanks:</span>
                             <ul class="m-2">
-                                <li>Ryan Fauzi (Xderm-Mini)</li>
-                                <li>Lutfa Ilham (Libernet)</li>
-                                <li>Suhu/Master Openwrt</li>
+								<li>Tuhan ~ Penguasa semesta, sang pemilik ilmu sekaligus sumbernya.</li>
+								<li>Ardi Setiawan ~ Developer tema Xderm Mini AdminLTE</li>
+								<li>Ryan Fauzi ~ Kang developer utama XDERM MINI GUI</li>
+								<li>Helmi Amirudin ~ Kang ngerapihin README | Kang bikin installer</li>
                             </ul>
                             <p>
                                 Mohon Maaf Kalau Masih Banyak Kekurangannya :D
