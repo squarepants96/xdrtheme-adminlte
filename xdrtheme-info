@@ -1,0 +1,46 @@
+#!/bin/bash
+#--------------------------------------------------------
+#   Don't remove this section for credits
+#   Don't rename this file
+#--------------------------------------------------------
+#   This script is used to install Xderm Mini GUI custom theme
+#   Installation script by helmiau a.k.a Helmi Amirudin
+#   my profile page https://me.helmiau.my.id
+#   my github https://github.com/helmiau
+#--------------------------------------------------------
+#-- Theme Info (you can edit these lines below)
+#--------------------------------------------------------
+# Add your theme name below, and place it between double quotes, space allowed
+#--------------------------------------------------------
+THEMENAME=Theme_Name
+#--------------------------------------------------------
+# Add your name below, and place it between double quotes, space allowed
+#--------------------------------------------------------
+CREATOR=Creator_Name
+#--------------------------------------------------------
+# Add your github username below, and place it between double quotes, No space allowed
+#--------------------------------------------------------
+GITUSER=github_username_account
+#--------------------------------------------------------
+# Add your theme repository name below, and place it between double quotes, No space allowed
+#--------------------------------------------------------
+GITREPO=github_repo_theme
+#--------------------------------------------------------
+# Add your used repository branch below, and place it between double quotes, No space allowed
+#--------------------------------------------------------
+GITBRANCH=main_master
+#--------------------------------------------------------
+# Add theme version, and place it between double quotes, No space allowed
+# Example : v1.0 or v2.1-beta
+#--------------------------------------------------------
+THEMEVER=v1.0
+#--------------------------------------------------------
+# Add yout update file lists, and place it between double quotes
+# This list taken under your repo, example : github.com/your_username/xdrtheme-your_theme_name
+# File name writing 		             = namefile.ext
+# File under directory writing 	         = img/background.jpg
+# Separate between files with #. example = login.php#index.php#
+#--------------------------------------------------------
+# UPDATELIST=login.php#index.php#footer.php#xderm-up.php#menu-admin.php#img/background.jpg#img/image.png#
+#--------------------------------------------------------
+#-- Theme Info End
