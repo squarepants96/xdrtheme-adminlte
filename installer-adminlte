@@ -48,7 +48,7 @@ URLTHEME="$CHECKNET/$GITBRANCH"
 GITURLTHEME="git://github.com/$GITUSER/$GITREPO.git"
 XDERMPATH="/www/xderm"
 XDERMPATHBAK="/www/xdermbak"
-THEMEINFO="/www/xderm/$GITREPO"
+THEMEINFO="/www/xderm/$GITREPO-$GITUSER"
 XDERMPATHINFO=$(if [ -d $XDERMPATH ]; then echo -e "${GRE}Available"; else echo -e "${RED}Unavailable"; fi)
 XDERMPATHBAKINFO=$(if [ -d $XDERMPATHBAK ]; then echo -e "${GRE}Available"; else echo -e "${RED}Unavailable"; fi)
 INSTALLSTAT=$(if [ -e $THEMEINFO ]; then echo -e "${GRE}Installed"; else echo -e "${RED}Not Installed"; fi)
@@ -106,7 +106,7 @@ if [[ $jawab == "g" || $jawab == "G"  || $jawab == "1" ]]; then
 			echo "  Done !."
 		fi
 	else
-		echo "  No connection..."
+		echo "  No internet connection or repository url unavailable..."
 		echo "  Leaving."
 	fi
 	echo "==========================================="
@@ -142,6 +142,12 @@ elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 			else
 				echo "  Config file is not available, skipping..."			
 			fi
+			if [[ -f $THEMEINFO ]]; then
+				echo "  $THEMEINFO is available, skipping..."
+			else
+				echo "  $THEMEINFO is not available, adding file..."
+				echo "$THEMEINFO" > $THEMEINFO
+			fi
 			echo "  Starting Xderm Mini..."
 			echo Start > /www/xderm/log/st
 			echo "  Xderm Mini Started..."
@@ -153,13 +159,19 @@ elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 			git clone --depth $GITURLTHEME 1 $XDERMPATH
 			echo "  Clone created..."
 			echo "  $THEMENAME by $CREATOR installed..."
+			if [[ -f $THEMEINFO ]]; then
+				echo "  $THEMEINFO is available, skipping..."
+			else
+				echo "  $THEMEINFO is not available, adding file..."
+				echo "$THEMEINFO" > $THEMEINFO
+			fi
 			echo "  Starting Xderm Mini..."
 			echo Start > /www/xderm/log/st
 			echo "  Xderm Mini Started..."
 			echo "  Done ! Refresh Xderm Mini Page"
 		fi
 	else
-		echo "  No internet connection..."
+		echo "  No internet connection or repository url unavailable..."
 		echo "  Leaving."
 	fi
 	echo "==========================================="
@@ -196,21 +208,25 @@ elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 			echo "  Clone created..."
 			echo "  $THEMENAME by $CREATOR installed..."
 			echo "  Restoring Configs..."
-			if [[ -d $XDERMPATHBAK/config ]]; then
-				cp -R $XDERMPATHBAK/config $XDERMPATH/config
+			if [[ -d $XDERMPATHBAK/configbak ]]; then
+				cp -R $XDERMPATHBAK/configbak $XDERMPATH/config
 				echo "  Configs Restored..."
 			else
 				echo "  Config folder is not available, skipping..."			
 			fi
-			if [[ -d $XDERMPATHBAK/config.txt ]]; then
-				cp $XDERMPATHBAK/config.txt $XDERMPATH/config.txt
+			if [[ -d $XDERMPATHBAK/config.txt.bak ]]; then
+				cp $XDERMPATHBAK/config.txt.bak $XDERMPATH/config.txt
 				echo "  Configs Restored..."
 			else
 				echo "  Config file is not available, skipping..."			
 			fi
-			cp $XDERMPATHBAK/config $XDERMPATH/config
-			cp $XDERMPATHBAK/config.txt $XDERMPATH/config.txt
 			echo "  Configs Restored..."
+			if [[ -f $THEMEINFO ]]; then
+				echo "  $THEMEINFO is available, skipping..."
+			else
+				echo "  $THEMEINFO is not available, adding file..."
+				echo "$THEMEINFO" > $THEMEINFO
+			fi
 			echo "  Starting Xderm Mini..."
 			echo Start > /www/xderm/log/st
 			echo "  Xderm Mini Started..."
@@ -222,13 +238,19 @@ elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 			git clone --depth $GITURLTHEME 1 $XDERMPATH
 			echo "  Clone created..."
 			echo "  $THEMENAME by $CREATOR installed..."
+			if [[ -f $THEMEINFO ]]; then
+				echo "  $THEMEINFO is available, skipping..."
+			else
+				echo "  $THEMEINFO is not available, adding file..."
+				echo "$THEMEINFO" > $THEMEINFO
+			fi
 			echo "  Starting Xderm Mini..."
 			echo Start > /www/xderm/log/st
 			echo "  Xderm Mini Started..."
 			echo "  Done ! Refresh Xderm Mini Page"
 		fi
 	else
-		echo "  No connection..."
+		echo "  No internet connection or repository url unavailable..."
 		echo "  Leaving."
 	fi
 	echo "==========================================="
@@ -239,7 +261,7 @@ elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "4" ]]; then
 	echo "  Uninstalling $THEMENAME..."
 	echo "  Checking paths..."
 	if [[ -f $THEMEINFO ]]; then
-		echo "  $THEMEINFO is $INSTALLSTAT..."
+		echo "  $THEMEINFO is $INSTALLSTAT${NOR}..."
 		echo "  $XDERMPATH is $XDERMPATHINFO..."
 		echo "  $XDERMPATHBAK is $XDERMPATHBAKINFO..."
 		echo "  Restoring Configs..."
