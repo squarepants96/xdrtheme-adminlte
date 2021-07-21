@@ -39,14 +39,13 @@ NOR='\033[0;37m' # Abu Abu Normal
 # Add your used repository branch below, and place it between double quotes
 	GITBRANCH="main"
 #--------------------------------------------------------
-# Add this installer file name below, and place it between double quotes
-	INSTALLERNAME="installer-adminlte"
-#--------------------------------------------------------
 #-- Theme Info End
 
 #-- Uneditable Info for script checking purpose
-URLTHEME="https://github.com/$GITUSER/$GITREPO/$GITBRANCH"
-GITURLTHEME="git://$GITUSER/$GITREPO.git"
+INSTALLERNAME="$(basename "$0")"
+CHECKNET="http://github.com/$GITUSER/$GITREPO"
+URLTHEME="$CHECKNET/$GITBRANCH"
+GITURLTHEME="git://github.com/$GITUSER/$GITREPO.git"
 XDERMPATH="/www/xderm"
 XDERMPATHBAK="/www/xdermbak"
 THEMEINFO="/www/xderm/$GITREPO"
@@ -55,7 +54,6 @@ XDERMPATHBAKINFO=$(if [ -d $XDERMPATHBAK ]; then echo -e "${GRE}Available"; else
 INSTALLSTAT=$(if [ -e $THEMEINFO ]; then echo -e "${GRE}Installed"; else echo -e "${RED}Not Installed"; fi)
 USERNOW=$(grep user /root/auth.txt | sed 's/.*user=//')
 PASSNOW=$(grep passwd /root/auth.txt | sed 's/.*passwd=//')
-CHECKNET="https://github.com/$GITUSER/$GITREPO"
 SCRIPTVER="1.0"
 
 #-- Installer Scripts
@@ -94,7 +92,7 @@ echo "==========================================="
 if [[ $jawab == "g" || $jawab == "G"  || $jawab == "1" ]]; then
 	clear
 	echo "  Checking connections..."
-	if wget --spider $CHECKNET -q; then
+	if wget -S --spider $CHECKNET 2>&1 | grep -q 'HTTP/1.1 200 OK'; then
 		echo "  Internet connected..."
 		echo "  Installing Git Package..."
 		echo "  Checking up git package availability..."
@@ -112,11 +110,11 @@ if [[ $jawab == "g" || $jawab == "G"  || $jawab == "1" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 	clear
 	echo "  Checking connections..."
-	if wget --spider $URLTHEME -q; then
+	if wget -S --spider $CHECKNET 2>&1 | grep -q 'HTTP/1.1 200 OK' ; then
 		echo "  Internet connected..."
 		echo "  Installing $THEMENAME..."
 		echo "  Checking paths..."
@@ -165,11 +163,11 @@ elif [[ $jawab == "i" || $jawab == "I"  || $jawab == "2" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 	clear
 	echo "  Checking connections..."
-	if wget --spider $CHECKNET -q; then
+	if wget -S --spider $CHECKNET 2>&1 | grep -q 'HTTP/1.1 200 OK'; then
 		echo "  Internet connected..."
 		echo "  Backing up configurations..."
 		if [[ -d $XDERMPATH/config ]]; then
@@ -234,7 +232,7 @@ elif [[ $jawab == "r" || $jawab == "R"  || $jawab == "3" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "3" ]]; then
 	clear
 	echo "  Uninstalling $THEMENAME..."
@@ -262,7 +260,7 @@ elif [[ $jawab == "ut" || $jawab == "UT"  || $jawab == "3" ]]; then
 	fi
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "a" || $jawab == "A"  || $jawab == "3" ]]; then
 	echo -n "  Enter New Username : " 
 	read -r USERNEW
@@ -272,21 +270,21 @@ elif [[ $jawab == "a" || $jawab == "A"  || $jawab == "3" ]]; then
 	echo -e "user=$USERNEW\npasswd=$PASSNEW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "u" || $jawab == "U"  || $jawab == "4" ]]; then
 	echo -n "  Enter New Username : " 
 	read -r USERNEW
 	echo -e "user=$USERNEW\npasswd=$PASSNOW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "p" || $jawab == "P"  || $jawab == "5" ]]; then
 	echo -n "  Enter New Password : "
 	read -r PASSNEW
 	echo -e "user=$USERNOW\npasswd=$PASSNEW" > /root/auth.txt
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "lp" || $jawab == "LP"  || $jawab == "6" ]]; then
 	clear
 	echo "==========================================="
@@ -335,7 +333,7 @@ elif [[ $jawab == "lp" || $jawab == "LP"  || $jawab == "6" ]]; then
 	echo -e " Install login page process finished..."
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 elif [[ $jawab == "rlp" || $jawab == "RLP"  || $jawab == "7" ]]; then
 	clear
 	clear
@@ -381,7 +379,7 @@ elif [[ $jawab == "rlp" || $jawab == "RLP"  || $jawab == "7" ]]; then
 	echo -e " Removal login page process finished..."
 	echo "==========================================="
 	clear
-	./$INSTALLERNAME
+	./"$INSTALLERNAME"
 else
 	echo "    Exiting program !"
 	echo "==========================================="
