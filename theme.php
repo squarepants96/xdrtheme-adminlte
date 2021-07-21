@@ -85,7 +85,7 @@ ceklogin();
 
         <div class="row no-print">
         <div class="col-xs-12">
-          <a href="https://github.com/squarepants96/Xderm-Mini-Theme" target="blank" class="btn btn-success"><i class="fa fa-download"></i> Github</a>
+          <a href="https://github.com/squarepants96/xdrtheme-adminlte" target="blank" class="btn btn-success"><i class="fa fa-download"></i> Github</a>
         </div>
       </div>
             </div>
