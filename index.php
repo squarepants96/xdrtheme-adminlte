@@ -102,7 +102,7 @@ $.get("http://ip-api.com/json", function (response) {
 
 </script>
 </head>
-  <body class="fixed skin-purple sidebar-mini">
+  <body class="fixed skin-red sidebar-mini">
     <div class="wrapper">
       <header class="main-header">
           <?php include "main-header.php"; ?>
