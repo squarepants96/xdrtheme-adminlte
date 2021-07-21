@@ -40,7 +40,7 @@ NOR='\033[0;37m' # Abu Abu Normal
 	GITBRANCH="main"
 #--------------------------------------------------------
 # Add this installer file name below, and place it between double quotes
-	INSTALLERNAME="xdrtheme-installer"
+	INSTALLERNAME="installer-adminlte"
 #--------------------------------------------------------
 #-- Theme Info End
 
