@@ -1,6 +1,12 @@
-THEMENAME=Admin LTE"      # Add your theme name below, and place it between double quotes, space allowed
-CREATOR="Ardi Setiawan"     # Add your name below, and place it between double quotes, space allowed
-GITUSER="squarepants96"     # Add your github username below, and place it between double quotes, No space allowed
-GITREPO="xdrtheme-adminlte"     # Add your theme repository name below, and place it between double quotes, No space allowed
-GITBRANCH="main"      # Add your used repository branch below, and place it between double quotes, No space allowed
-THEMEVER="v2.0"     # Add theme version, and place it between double quotes, No space allowed. Example : v1.0 or v2.1-beta
+# Add your theme name below, and place it between double quotes, space allowed
+THEMENAME=Admin LTE"
+# Add your name below, and place it between double quotes, space allowed
+CREATOR="Ardi Setiawan"
+# Add your github username below, and place it between double quotes, No space allowed
+GITUSER="squarepants96"
+# Add your theme repository name below, and place it between double quotes, No space allowed
+GITREPO="xdrtheme-adminlte"
+# Add your used repository branch below, and place it between double quotes, No space allowed
+GITBRANCH="main"
+# Add theme version, and place it between double quotes, No space allowed. Example : v1.0 or v2.1-beta
+THEMEVER="v2.0"
