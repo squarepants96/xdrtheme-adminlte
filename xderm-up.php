@@ -76,7 +76,7 @@ ceklogin();
                         <div>
                             <span>Current Version:</span>
                             <ul class="m-2">
-                                <li>V3.0</li>
+                                <li>V3.1</li>
                             </ul>
                             
                         </div>
