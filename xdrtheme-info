@@ -12,28 +12,28 @@
 #--------------------------------------------------------
 # Add your theme name below, and place it between double quotes, space allowed
 #--------------------------------------------------------
-THEMENAME=Theme_Name
+THEMENAME=Admin LTE
 #--------------------------------------------------------
 # Add your name below, and place it between double quotes, space allowed
 #--------------------------------------------------------
-CREATOR=Creator_Name
+CREATOR=Ardi Setiawan
 #--------------------------------------------------------
 # Add your github username below, and place it between double quotes, No space allowed
 #--------------------------------------------------------
-GITUSER=github_username_account
+GITUSER=squarepants96
 #--------------------------------------------------------
 # Add your theme repository name below, and place it between double quotes, No space allowed
 #--------------------------------------------------------
-GITREPO=github_repo_theme
+GITREPO=xdrtheme-adminlte
 #--------------------------------------------------------
 # Add your used repository branch below, and place it between double quotes, No space allowed
 #--------------------------------------------------------
-GITBRANCH=main_master
+GITBRANCH=main
 #--------------------------------------------------------
 # Add theme version, and place it between double quotes, No space allowed
 # Example : v1.0 or v2.1-beta
 #--------------------------------------------------------
-THEMEVER=v1.0
+THEMEVER=v2.0
 #--------------------------------------------------------
 # Add yout update file lists, and place it between double quotes
 # This list taken under your repo, example : github.com/your_username/xdrtheme-your_theme_name
