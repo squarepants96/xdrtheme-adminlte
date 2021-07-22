@@ -19,36 +19,46 @@ AdminLTE Theme is most beautiful theme based on flat style with colorful user in
 </details>
 
 ## Installation
-
 Copy scripts below and run it via **```terminal```**
 ```
-wget -O installer-adminlte https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/installer-adminlte && chmod +x installer-adminlte && ./installer-adminlte
+wget -O xdrtheme-info https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-info && wget -O xdrtheme-update https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-update && wget -O xdrtheme-installer https://raw.githubusercontent.com/helmiau/xdrtheme-themename/main/xdrtheme-installer && chmod +x xdrtheme-installer && ./xdrtheme-installer
 ```
+
+Thanks to [Helmi Amirudin](https://github.com/helmiau/xdrtheme-themename) for this amazing installer script. If you have theme like me, just use this installer script by use these codes only, but you need to read [the installation instructions](https://github.com/helmiau/xdrtheme-themename/blob/main/README.md).
 
 Run command **```./installer-adminlte```** Then follow instruction below
 ```
 ===========================================
-|  Xderm Mini Theme Installer by helmiau  |
+  Xderm Mini Theme Installer v3.0 by helmiau
 ===========================================
-  Theme Name        : Admin LTE
-  Theme Creator     : Ardi Setiawan
+  Theme Name      : Admin LTE
+  Theme Creator   : Ardi Setiawan
+  Theme Link      :
+  github.com/squarepants96/xdrtheme-adminlte
 ===========================================
-  Install Status    : Not Installed
-  Xderm Path        : Available
-  Xderm Path Backup : Unavailable
+  Install Status  : Installed
+  Xderm Path      : Available
+  Xderm Backup    : Available
 ===========================================
-  Panel Username    : admin
-  Panel Password    : xderm
+  Panel Username  : admin
+  Panel Password  : xderm
+  Login Page      : Available
+  Login Pg Backup : Unavailable
 ===========================================
-|              Command Lists              |
+               Command Lists
 ===========================================
-  Install Theme               = 1 / it / IT
-  Uninstall Theme             = 2 / ut / UT
-  Change Username & Password  = 3 / a / A
-  Change Username Only        = 4 / u / U
-  Change Password Only        = 5 / p / P
-  Install Login Page          = 6 / lp / LP
-  Remove Login Page           = 7 / rlp/ RLP
+  Install Git              : 1 / g / G
+  Install Theme            : 2 / i / I
+  Update Theme             : 3 / u / U
+  Reinstall Theme          : 4 / rt / RT
+  Uninstall Theme          : 5 / ut / UT
+  Change User & Pass Login : 6 / up / UP
+  Change Username Only     : 7 / un / UN
+  Change Password Only     : 8 / pw / PW
+  Install Login Page       : 9 / il / IL
+  Remove Login Page        : 10 / rl / RL
+===========================================
+           Exit = type anything !
 ===========================================
 ```
 
