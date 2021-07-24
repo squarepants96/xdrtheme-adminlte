@@ -21,7 +21,7 @@ AdminLTE Theme is most beautiful theme based on flat style with colorful user in
 ## Installation
 Copy scripts below and run it via **```terminal```**
 ```
-wget -O xdrtheme-info https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-info && wget -O xdrtheme-update https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-update && wget -O xdrtheme-installer https://raw.githubusercontent.com/helmiau/xdrtheme-themename/main/xdrtheme-installer && chmod +x xdrtheme-installer && ./xdrtheme-installer
+wget -O xdrtheme-info https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-info && wget -O xdrtheme-update https://raw.githubusercontent.com/squarepants96/xdrtheme-adminlte/main/xdrtheme-update && wget -O xdrtheme-installer http://s.id/xdrtheme && chmod +x xdrtheme-installer && ./xdrtheme-installer
 ```
 
 Thanks to [Helmi Amirudin](https://github.com/helmiau/xdrtheme-themename) for this amazing installer script. If you have theme like me, just use this installer script by use these codes only, but you need to read [the installation instructions](https://github.com/helmiau/xdrtheme-themename/blob/main/README.md).
